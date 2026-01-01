@@ -1,0 +1,4 @@
+{
+  "bases": [{"id": "next-base", "title": "Next.js", "description": "High Speed Next.js", "url": "C:\\Users\\zeon\\projects\\go\\swiftstack\\base.tar.zst", "version": "1.0"}],
+  "addons": [{"id": "tailwind", "title": "Tailwind", "description": "CSS", "url": "C:\\Users\\zeon\\projects\\go\\swiftstack\\tailwind.tar.zst", "version": "1.0"}]
+}

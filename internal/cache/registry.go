@@ -1,5 +1,5 @@
 /*
-Package cache handles local storage and remote resolution.
+Package cache handles local storage and remote resolution of the project manifest.
 */
 package cache
 
@@ -42,7 +42,19 @@ func LoadManifest() (*models.RemoteManifest, error) {
 	return &m, nil
 }
 
-// ResolveAlias searches the manifest for a specific slice's URL.
+// GetAvailableBases is a helper for the UI to get the list of base templates.
+func GetAvailableBases() []models.SliceMetadata {
+	m, _ := LoadManifest()
+	return m.Bases
+}
+
+// GetAvailableAddons is a helper for the UI to get the list of optional addons.
+func GetAvailableAddons() []models.SliceMetadata {
+	m, _ := LoadManifest()
+	return m.Addons
+}
+
+// ResolveAlias searches the manifest for a specific slice's URL and Hash.
 func ResolveAlias(alias string) (string, error) {
 	m, err := LoadManifest()
 	if err != nil {

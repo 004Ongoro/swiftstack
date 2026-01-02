@@ -56,7 +56,7 @@ func GenerateProject(opts ProjectOptions) error {
 	}
 
 	// 3. Process Addons
-	for i, slicePath := range addonPaths {
+	for _, slicePath := range addonPaths {
 		tempAddonDir := filepath.Join(fullPath, ".swiftstack_temp")
 		os.MkdirAll(tempAddonDir, 0755)
 
